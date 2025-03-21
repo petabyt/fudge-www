@@ -10,4 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: sudo apt install doxygen pandoc && make
-      - run: git add . && git commit -m "pages" && git push -f origin master:gh-pages
+      - run: |
+        git config --global user.email "you@example.com"
+        git config --global user.name "git"
+        git add . && git commit -m "pages" && git push -f origin master:gh-pages
