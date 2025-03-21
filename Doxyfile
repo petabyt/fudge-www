@@ -1,0 +1,13 @@
+PROJECT_NAME           = "libfudge"
+PROJECT_BRIEF          = "libfudge generated documentation"
+INPUT                  = fudge/lib/fujiptp.h
+USE_MDFILE_AS_MAINPAGE = fudge/docs/README.md
+GENERATE_LATEX         = NO
+GENERATE_HTML          = YES
+SOURCE_BROWSER = YES
+#LAYOUT_FILE = docs/DoxygenLayout.xml
+
+VERBATIM_HEADERS       = NO
+
+OUTPUT_DIRECTORY = .
+HTML_OUTPUT = docs
