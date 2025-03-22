@@ -1,3 +1,6 @@
+---
+page-title: Fudge
+---
 <div class="m-container">
 <h3 class="m-text-center m-noindent">Fudge is a cross-platform open-source alternative to Fujifilm's official camera app.</h3>
 <div class="m-row">
