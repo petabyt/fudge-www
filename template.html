@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
+  <link rel="icon" href="$top$/favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 $for(author-meta)$
   <meta name="author" content="$author-meta$" />
@@ -59,19 +60,17 @@ $endif$
 <article class="m-container">
 
 $if(title)$
-  <header>
-  <h1><a href="#" rel="bookmark" title="$title$">
+<header>
+<h1>$title$</h1>
 
-  $if(date)$
-    <time datetime="$date$">$date$</time>
-  $endif$
+$if(date)$
+<time datetime="$date$">$date$</time>
+$endif$
 
-  $title$
-  </a></h1>
 
-    $if(subtitle)$
-    <p>$subtitle$</p>
-    $endif$
+$if(subtitle)$
+<p>$subtitle$</p>
+$endif$
 
   $for(author)$
   <p class="author">By $author$</p>
@@ -95,6 +94,7 @@ $if(posts)$
 <div class="m-row">
   <div class="m-col-m-8 m-push-m-2">
     <div class="m-landing-news m-note m-default">
+      <h3>Latest news &raquo;</h3>
       <ul class="m-unstyled">
 $for(posts)$
         <li><time class="m-text m-dim" datetime="$posts.date$">$posts.date$</time><a href="$posts.link$">$posts.title$</a></li>
