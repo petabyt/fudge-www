@@ -13,7 +13,7 @@ jobs:
         run: sudo apt install doxygen pandoc && make
       - name: deploy
         run: |
-          git rm -rf fudge
+          git rm -rf fudge && git rm -rf .gitignore
           git config --global user.email "you@example.com"
           git config --global user.name "git"
           git add . && git commit -m "pages"
