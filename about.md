@@ -6,7 +6,7 @@ A lot of Fudge discussion happens in the [Fujihack Discord server](https://disco
 
 Notes:
 - This project was temporarily named 'fujiapp' (hence the package name being dev.danielc.fujiapp)
-- 'libfudge' is portable and based on [camlib](https://github.com/petabyt/camlib), a PTP client library I wrote for my experiments with [Magic Lantern](https://github.com/petabyt/mlinstall) and [Fujihack](https://fujihack.org/).
+- 'libfudge' is portable and based on [libpict](https://github.com/petabyt/libpict), a PTP client library I wrote for my experiments with [Magic Lantern](https://github.com/petabyt/mlinstall) and [Fujihack](https://fujihack.org/).
 
 # FAQ
 ## iOS support?
