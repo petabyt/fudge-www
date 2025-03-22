@@ -9,10 +9,8 @@ copy-assets:
 	cp fudge/fastlane/metadata/android/en-US/images/phoneScreenshots/*.png img/
 	cp fudge/android/app/src/main/assets/img/* img/
 
-docs:
-	mkdir docs
-.PHONY: doxy
-doxy: docs
+doxy:
+	mkdir -p docs
 	doxygen
 
 %.html: %.md Makefile template.html *.css
@@ -21,3 +19,5 @@ doxy: docs
 %/index.html: %.md Makefile template.html *.css
 	mkdir -p $(dir $@)
 	pandoc $(PANDOC_FLAGS) -M top=.. --extract-media=../ -s -c ../m-dark.css $< > $@
+
+.PHONY: doxy clean copy-assets clean all

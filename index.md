@@ -27,8 +27,11 @@ This app isn't finished yet, so don't set high expectations. Fuji's implementati
 ## Ready to try it out?
 
 <div class="m-row">
-<div class="m-col-m-4 m-image">
-<a href="https://play.google.com/store/apps/details?id=dev.danielc.fujiapp"><img width="250" src="img/GetItOnGooglePlay_Badge_Web_color_English.png"></img></a>
+<div class="m-col-m-4 m-image"><a href="https://play.google.com/store/apps/details?id=dev.danielc.fujiapp"><img src="img/GetItOnGooglePlay_Badge_Web_color_English.png"></img></a></div>
+<div class="m-col-m-4 m-image"><a href="https://apt.izzysoft.de/fdroid/index/apk/dev.danielc.fujiapp"><img src="img/get-it-on.png"></img></a></div>
+<div class="m-col-m-4">
+<p class="m-text-center">
+<h3>Windows/Linux/MacOS</h3>Coming Soon
+</p>
 </div>
-<div class="m-col-m-4 m-image"><a href="https://apt.izzysoft.de/fdroid/index/apk/dev.danielc.fujiapp"><img width="250" src="img/get-it-on.png"></img></a></div>
 </div>
