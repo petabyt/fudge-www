@@ -19,6 +19,13 @@ $endif$
   <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
 $for(css)$
   <link rel="stylesheet" href="$css$" />
+$endfor$
+$for(header-includes)$
+  $header-includes$
+$endfor$
+$if(math)$
+  $math$
+$endif$
   <style>
   /* Fix for markdown images */
   article img {
@@ -27,13 +34,6 @@ $for(css)$
     padding: 10px;
   }
   </style>
-$endfor$
-$for(header-includes)$
-  $header-includes$
-$endfor$
-$if(math)$
-  $math$
-$endif$
 </head>
 <body>
 <header><nav id="navigation">
