@@ -26,4 +26,4 @@ There is also [Fuji-Fi](https://apps.apple.com/us/app/fuji-fi/id1441309889) and 
 - If you want the fastest transfer speeds, you can use a USB-C sdcard reader.
 
 ## RAW Conversion/Fuji X Raw Studio replacement
-This is not high priority right now but it may be exposed over CLI: [#21](https://github.com/petabyt/fudge/issues/21)
+See [#21](https://github.com/petabyt/fudge/issues/21)
