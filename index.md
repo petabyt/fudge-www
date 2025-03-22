@@ -1,9 +1,9 @@
 <div class="m-container">
 <h3 class="m-text-center m-noindent">Fudge is a cross-platform open-source alternative to Fujifilm's official camera app.</h3>
 <div class="m-row">
-<div class="m-col-m-4 m-image"><img src='fudge/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png' width='250'></div>
-<div class="m-col-m-4 m-image"><img src='fudge/fastlane/metadata/android/en-US/images/phoneScreenshots/2.png' width='250'></div>
-<div class="m-col-m-4 m-image"><img src='fudge/fastlane/metadata/android/en-US/images/phoneScreenshots/4.png' width='250'></div>
+<div class="m-col-m-4 m-image"><img src='img/1.png' width='250'></div>
+<div class="m-col-m-4 m-image"><img src='img/2.png' width='250'></div>
+<div class="m-col-m-4 m-image"><img src='img/4.png' width='250'></div>
 </div>
 </div>
 
