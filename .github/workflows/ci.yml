@@ -10,7 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: clone
-        run: git clone https://github.com/petabyt/fudge.git --depth 1 --recurse-submodules ../fudge
+        run: |
+          git config --global url."https://github.com/".insteadOf "git@github.com:"
+          git clone https://github.com/petabyt/fudge.git --depth 1 --recurse-submodules ../fudge
       - name: build
         run: sudo apt install doxygen pandoc && make
       - name: deploy
