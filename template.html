@@ -36,7 +36,6 @@ $if(math)$
 $endif$
 </head>
 <body>
-
 <header><nav id="navigation">
   <div class="m-container">
     <div class="m-row">
@@ -56,7 +55,6 @@ $endif$
     </div>
   </div>
 </nav></header>
-
 <main>
 <article class="m-container">
 
@@ -90,13 +88,38 @@ $endif$
 $table-of-contents$
 </nav>
 $endif$
+
 $body$
 
-</article>
+$if(posts)$
+<div class="m-row">
+  <div class="m-col-m-8 m-push-m-2">
+    <div class="m-landing-news m-note m-default">
+      <ul class="m-unstyled">
+$for(posts)$
+        <li><time class="m-text m-dim" datetime="$posts.date$">$posts.date$</time><a href="$posts.link$">$posts.title$</a></li>
+$endfor$
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
+$endif$
 
+</article>
 $for(include-after)$
 $include-after$
 $endfor$
 </main>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>Fudge. Copyright &copy; <a href="mailto:brikbusters@gmail.com">Daniel Cook</a>,
+        2023. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
 </body>
 </html>

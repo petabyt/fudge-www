@@ -20,3 +20,13 @@ This app isn't finished yet, so don't set high expectations. Fuji's implementati
 - Bluetooth pairing
 - Geolocation
 - Liveview/remote shutter
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

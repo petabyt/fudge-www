@@ -1,4 +1,4 @@
-all: help/index.html doxy writeup.html index.html
+all: help/index.html doxy writeup.html index.html blog/index.html about/index.html blog/index.html
 
 #%.html: PANDOC_FLAGS := --metadata title=""
 
