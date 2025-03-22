@@ -1,7 +1,7 @@
 PANDOC_FLAGS := -f markdown --standalone --template="template.html"
 MD_DEPS := Makefile template.html *.css
 
-OUT := help/index.html doxy writeup.html index.html blog/index.html about/index.html blog/index.html 404.html blog/1.html blog/2.html
+OUT := help/index.html doxy index.html blog/index.html about/index.html blog/index.html 404.html blog/1.html blog/2.html
 all: $(OUT)
 clean:
 	rm -rf $(OUT)
