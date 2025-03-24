@@ -1,7 +1,7 @@
 PROJECT_NAME           = "libfudge"
 PROJECT_BRIEF          = "libfudge generated documentation"
-INPUT                  = ../fudge/lib/fujiptp.h
-USE_MDFILE_AS_MAINPAGE = ../fudge/docs/README.md
+INPUT                  = ../fudge/lib/fujiptp.h ../fudge/lib/object.h ../fudge/lib/fuji_lua.h ../fudge/lib/fuji.h ../fudge/lib/app.h ../fudge/lib/fp/src/fp.h ../fudge/docs/dev.md ../fudge/README.md
+USE_MDFILE_AS_MAINPAGE = ../fudge/README.md
 GENERATE_LATEX         = NO
 GENERATE_HTML          = YES
 SOURCE_BROWSER = YES
