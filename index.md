@@ -2,6 +2,9 @@
 page-title: Fudge
 
 posts:
+  - title: "Fudge for desktop released"
+    date: "April 1 2025"
+    link: blog/3.html
   - title: "0.2.0 Update"
     date: "Oct 31 2024"
     link: blog/1.html
