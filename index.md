@@ -45,8 +45,8 @@ ___
 <div class="m-col-m-4 m-image"><a href="https://play.google.com/store/apps/details?id=dev.danielc.fujiapp"><img src="img/GetItOnGooglePlay_Badge_Web_color_English.png"></img></a></div>
 <div class="m-col-m-4 m-image"><a href="https://apt.izzysoft.de/fdroid/index/apk/dev.danielc.fujiapp"><img src="img/get-it-on.png"></img></a></div>
 <div class="m-col-m-4">
-<p class="m-text-center">
-<h3>Windows/Linux/MacOS</h3>Coming Soon
+<p class="m-text-center m-noindent">
+<h3>Windows/Linux/MacOS</h3><a href="https://fudge.danielc.dev/blog/3">Download Beta</a>
 </p>
 </div>
 </div>
