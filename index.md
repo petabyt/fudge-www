@@ -2,6 +2,9 @@
 page-title: Fudge
 
 posts:
+  - title: "Fudge turns 2"
+    date: "June 9 2025"
+    link: blog/4.html
   - title: "Fudge for desktop released"
     date: "April 1 2025"
     link: blog/3.html
@@ -14,7 +17,7 @@ posts:
 
 ---
 <div class="m-container">
-<h3 class="m-text-center m-noindent">Fudge is an open-source alternative to Fujifilm's official camera pairing app.</h3>
+<h3 class="m-text-center m-noindent">Fudge is an open-source alternative to Fujifilm's camera pairing apps.</h3>
 <div class="m-row">
 <div class="m-col-m-4 m-image"><img src='img/1.png' width='100%'>Connect through USB or WiFi</div>
 <div class="m-col-m-4 m-image"><img src='img/2.png' width='100%'>Scroll through the image gallery</div>
