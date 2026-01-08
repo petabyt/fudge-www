@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <link rel="icon" href="../favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Daniel Cook" />
+  <title>Fudge for Desktop released</title>
+  <link rel="stylesheet" href="../m-dark.css" />
+  <style>
+  /* Fix for markdown images */
+  article img {
+    max-width: 100%;
+    display: block;
+    padding: 10px;
+  }
+  </style>
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href=".." id="m-navbar-brand" class="m-col-t-9 m-col-m-none m-left-m">Fudge</a>
+      <a id="m-navbar-show" href="#navigation" title="Show navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
+      <a id="m-navbar-hide" href="#" title="Hide navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="../about">About</a></li>
+            <li><a href="../help">Help</a></li>
+            <li><a href="../docs">Doxygen</a></li>
+            <li><a href="https://github.com/petabyt/fudge">Github</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main>
+<article class="m-container">
+
+<header>
+<h1>Fudge for Desktop released</h1>
+
+<time datetime="April 1 2025">April 1 2025</time>
+
+
+
+    <p class="author">By Daniel Cook</p>
+  
+  </header>
+
+
+<p>Fujifilm has a lot of desktop software:</p>
+<ul>
+<li>FUJIFILM TETHER APP</li>
+<li>FUJIFILM X Acquire</li>
+<li>FUJIFILM X RAW STUDIO</li>
+<li>FUJIFILM PC AutoSave</li>
+<li>FUJIFILM X Webcam</li>
+</ul>
+<p>Ever wondered if somebody would come along and make open-source
+alternatives? Well, wonder no more.</p>
+<p>Introducing:</p>
+<p>Fudge for Linux, Windows, and MacOS.</p>
+<hr />
+<p>Currently, this software has two main features:</p>
+<ul>
+<li>Backup and Restore settings (X Acquire functionality)</li>
+<li>RAF-&gt;JPG Raw Conversion (X RAW Studio functionality)</li>
+</ul>
+<p>It comes with a bunch of CLI options:</p>
+<pre><code>Fudge 0.1.0
+Compilation date: April 1 2025
+  --list
+    List all PTP devices connected to this computer
+  --dev &lt;device number&gt;
+    Select a device to connect to instead of choosing the first available one.
+  --raw &lt;input raf&gt; &lt;output jpeg path&gt; &lt;profile file&gt;
+    Does a Raw conversion based on information parsed from a FP1/FP2/FP3 file.
+  --backup &lt;output dat path&gt;
+    Backs up camera settings to file.
+  --restore &lt;input dat path&gt;
+    Load camera settings from file.
+  --dump-usb
+    Dump all info on a camera. If something goes wrong you may want to send this info to developers.
+  --script &lt;filename&gt;
+    Execute a Lua script using fudge bindings
+  --parse-fp &lt;filename&gt;
+    Parse and dump a FP1/FP2/FP3 file</code></pre>
+<p>And the most awful looking UI you’ve ever seen: <img
+src="../img/desktop.png" alt="screenshot of Fudge desktop" /></p>
+<p>It even has Lua bindings.</p>
+<pre><code>$ cat test.lua
+x = ptp.getDeviceInfo()
+print(&quot;You are connected to a &quot; .. x[&quot;model&quot;])
+$ fudge --script test.lua
+Connected to a Fuji camera, running test.lua
+You are connected to a X-H1</code></pre>
+<h2 id="raw-conversion">Raw Conversion</h2>
+<p>The main blocker for writing an X Raw Studio replacement has been the
+proprietary Fujifilm profile formats. To reverse-engineer them, I used
+<a href="https://github.com/petabyt/vcam">vcam</a>, my camera emulator
+project, to spoof X Raw Studio running in a VM through vhci-hcd. I’ll
+spare you the technical details, but this allowed me to manually
+clean-room reverse-engineer these profile formats and create a <a
+href="https://github.com/petabyt/fp">library to handle them</a>.</p>
+<p>The result is a CLI version of X Raw Studio.</p>
+<p>Usage is as simple as: RAF + FP1/FP2/FP3 = output.jpg</p>
+<pre><code>$ fudge --raw ~/Pictures/DSC0000.RAF output.jpg MyProfile.FP1</code></pre>
+<p>FP1/FP2/FP3 files are Fuji’s XML-based profile format used by X Raw
+Studio. You can read more about them <a
+href="https://github.com/petabyt/fp">here</a>.</p>
+<p><strong>Note: This hasn’t been well-tested and whether it may cause
+harm is unknown. To my knowledge this is the first time somebody has
+reverse-engineered the raw conversion protocol.</strong></p>
+<h2 id="ready-to-try-it-out"><a
+href="https://github.com/petabyt/fudge-desktop-legacy/releases/tag/0.1.0">Ready
+to try it out?</a></h2>
+
+
+</article>
+</main>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>&copy; 2023 Fudge by <a href="mailto:brikbusters@gmail.com">Daniel Cook</a> and contributors</p>
+        <p>Fujifilm is a trademark of Fujifilm Holdings Corporation and is not associated with this project.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

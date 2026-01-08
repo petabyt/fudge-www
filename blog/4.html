@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <link rel="icon" href="../favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Daniel Cook" />
+  <title>Fudge turns 2</title>
+  <link rel="stylesheet" href="../m-dark.css" />
+  <style>
+  /* Fix for markdown images */
+  article img {
+    max-width: 100%;
+    display: block;
+    padding: 10px;
+  }
+  </style>
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href=".." id="m-navbar-brand" class="m-col-t-9 m-col-m-none m-left-m">Fudge</a>
+      <a id="m-navbar-show" href="#navigation" title="Show navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
+      <a id="m-navbar-hide" href="#" title="Hide navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="../about">About</a></li>
+            <li><a href="../help">Help</a></li>
+            <li><a href="../docs">Doxygen</a></li>
+            <li><a href="https://github.com/petabyt/fudge">Github</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main>
+<article class="m-container">
+
+<header>
+<h1>Fudge turns 2</h1>
+
+<time datetime="June 9 2025">June 9 2025</time>
+
+
+
+    <p class="author">By Daniel Cook</p>
+  
+  </header>
+
+
+<p>It’s hard to believe Fudge is now 2 years old now! This post is a
+quick write-up on what has been done in the past year, and what’s ahead.
+If you’re not familiar, Fudge is an alternative pairing app for Fujifilm
+cameras. See the <a href="https://danielc.dev/blog/fudge1/">previous
+write-up</a> to learn more.</p>
+<h2 id="release"><a
+href="https://github.com/petabyt/fudge/releases/tag/0.2.0">0.2.0
+Release</a></h2>
+<p>0.2.0 brought a lot of new features and improvements:</p>
+<ul>
+<li>Added compatibility with <a
+href="https://www.fujifilm-x.com/en-us/support/download/software/pc-autosave/">PC
+AutoSave</a></li>
+<li>Added a downloaded photos gallery</li>
+<li>Added minimal <a
+href="https://app.fujifilm-dsc.com/en/tether/">wireless tether</a>
+compatibility</li>
+<li>Improved WiFi Android connection process</li>
+<li>Improved camera compatibility</li>
+</ul>
+<h2 id="a-clone-of-x-raw-studio-that-runs-on-linux">A clone of X Raw
+Studio (that runs on Linux!)</h2>
+<p>The biggest blocker previously for writing an alternative to X Raw
+Studio client was the fact that Fujifilm’s profile format was completely
+undocumented. Using <a href="https://github.com/petabyt/vcam">vcam</a>
+black-box reverse-engineering and Virtualbox, I was able to <a
+href="https://github.com/petabyt/fp">reverse this format</a> in just a
+few hours.</p>
+<p>I used this to create a <a
+href="https://gitlab.futo.org/eron/fubs/-/commit/5fb1de1dec2781d42b082635a54282dab8949708">crude
+desktop app</a>, which could serve as the foundations for a more
+complete X Raw Studio replacement.</p>
+<h2 id="rewriting-the-frontend">Rewriting the frontend</h2>
+<p>The current UI is written in Android’s classic views and XML system.
+This framework is aging, and will only get slower over time. That and
+the fact the current frontend is a <a
+href="https://news.ycombinator.com/item?id=16771185">state management
+mess</a> tells me that it’s time to start looking at more modern
+options. My current choice is <a
+href="https://developer.android.com/compose"><strong>Jetpack
+Compose</strong></a>. You can read more about the frontend rewrite <a
+href="https://github.com/petabyt/fudge/issues/26">here</a>.</p>
+<h2 id="into-the-future">Into the future</h2>
+<p>After the frontend is rewritten and stable, the next thing to focus
+on is <strong>bluetooth</strong>. A lot of great work on reversing Fuji
+bluetooth has been done by <a
+href="https://github.com/gkoh/furble">gkoh</a> which means you already
+have a great third-party open-source option for pairing with your
+camera.</p>
+<p>But a third-party open-source app would also be nice to have,
+wouldn’t it?</p>
+<p>As for how this will work, when it will happen, if it will happen, or
+how well it will work. No idea. But it’s something to think about!</p>
+<p>But here’s one way it could happen: with the way Fuji cameras ‘hand
+off’ camera control from bluetooth to WiFi, it would be possible for
+this effort to take place in a <em>completely separate app</em> that can
+simply launch Fudge telling it to connect to the camera’s WiFi AP. This
+could have the added benefit of being a project in a different language
+or framework that could work at a faster or slower pace relative to
+Fudge.</p>
+
+
+</article>
+</main>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>&copy; 2023 Fudge by <a href="mailto:brikbusters@gmail.com">Daniel Cook</a> and contributors</p>
+        <p>Fujifilm is a trademark of Fujifilm Holdings Corporation and is not associated with this project.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>
